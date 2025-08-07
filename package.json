@@ -1,0 +1,30 @@
+{
+  "name": "golem-base-ts-sdk-dev-journey",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+   "build": "tsc",
+    "app": "node dist/src/app.js",
+    "wallet": "node dist/src/wallet.js",
+    "test:daily": "npm run build && npm run app",
+    "test:ci": "npm run build && timeout 300 npm run app || true"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@cucumber/cucumber": "^12.1.0",
+    "@types/chai": "^5.2.2",
+    "@types/node": "^24.1.0",
+    "chai": "^5.2.1",
+    "ts-node": "^10.9.2"
+  },
+  "dependencies": {
+    "@ethereumjs/wallet": "^10.0.0",
+    "golem-base-sdk": "^0.1.16",
+    "tslib": "^2.8.1",
+    "typescript": "^5.9.2"
+  }
+}
