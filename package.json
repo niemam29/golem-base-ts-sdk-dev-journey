@@ -8,7 +8,7 @@
     "build": "tsc",
     "app": "node dist/src/app.js",
     "wallet": "node dist/src/wallet.js",
-    "test:e2e": "vitest run test/voting-board.e2e.test.ts",
+    "test:voting-board": "vitest run test/voting-board.e2e.test.ts",
     "test:daily": "npm run build && npm run app",
     "test:ci": "npm run build && timeout 300 npm run app || true"
   },
