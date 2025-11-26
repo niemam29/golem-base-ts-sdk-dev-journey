@@ -27,5 +27,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Show Arkiv SDK version
+        run: npm ls @arkiv-network/sdk
+
       - name: Run Arkiv Voting Board E2E test
         run: npm run test:voting-board
